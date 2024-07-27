@@ -83,9 +83,11 @@ body, html {
 
 .center-map {
     margin-top: 60px; /* Add some margin to center it vertically */
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .top-text {
         font-size: 18px;
@@ -102,7 +104,7 @@ body, html {
 
     .center-map {
         width: 100%;
-        height: auto;
+        height: 300px;
     }
 }
 
@@ -127,6 +129,7 @@ body, html {
 
     .center-map {
         width: 100%;
-        height: auto;
+        height: 200px;
     }
 }
+
