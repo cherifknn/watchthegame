@@ -19,16 +19,18 @@ body, html {
     align-items: center;
     height: 100%;
     position: relative;
-    padding: 20px; /* Add padding for better spacing on small screens */
+    padding: 20px;
 }
 
-.centered-text {
+.top-text {
     display: flex;
     align-items: center;
-    font-size: 56px; /* Default font size for larger screens */
+    font-size: 24px; /* Smaller font size */
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center; /* Center the text on small screens */
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 20px; /* Position at the top */
 }
 
 .bold-text {
@@ -40,17 +42,17 @@ body, html {
     font-size: 24px;
     color: black;
     position: absolute;
-    bottom: 80px; /* Adjusted to accommodate the button */
+    bottom: 80px;
     text-align: center;
-    width: 100%; /* Ensure footer text is centered and fits within the screen */
-    padding: 0 20px; /* Add padding for better readability on small screens */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .signup-button {
-    font-size: 16px; /* Smaller font size for a more discreet look */
+    font-size: 16px;
     color: white;
-    background-color: rgb(205, 23, 23); /* Match the border color of the input */
+    background-color: rgb(205, 23, 23);
     border: 2px solid rgb(205, 23, 23);
     border-radius: 4px;
     padding: 5px 10px;
@@ -58,59 +60,73 @@ body, html {
     text-align: center;
     transition: background-color 0.3s ease;
     position: absolute;
-    bottom: 40px; /* Position the button just below the footer text */
+    bottom: 40px;
 }
 
 .signup-button:hover {
-    background-color: rgb(180, 20, 20); /* Slightly darker on hover */
+    background-color: rgb(180, 20, 20);
 }
 
 .search-input {
-    font-size: 56px; /* Match the font size of surrounding text */
-    border: 3px dashed rgb(205, 23, 23); /* Match the border style of the placeholder */
+    font-size: 24px; /* Match the smaller font size */
+    border: 2px dashed rgb(205, 23, 23);
     border-radius: 4px;
     outline: none;
     color: black;
     background-color: transparent;
     transition: width 0.2s ease-in-out;
     width: auto;
-    margin: 0 10px; /* Add space before and after the input */
-    text-align: center; /* Center the text */
-    padding: 0 5px; /* Add some padding to the input */
+    margin: 0 10px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.center-map {
+    margin-top: 60px; /* Add some margin to center it vertically */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .centered-text {
-        font-size: 36px; /* Reduce font size for tablets */
+    .top-text {
+        font-size: 18px;
     }
 
     .search-input {
-        font-size: 36px; /* Reduce input font size for tablets */
+        font-size: 18px;
     }
 
     .signup-button {
-        font-size: 14px; /* Reduce button font size for tablets */
-        padding: 4px 8px; /* Adjust padding for tablets */
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .center-map {
+        width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .centered-text {
-        font-size: 24px; /* Further reduce font size for phones */
+    .top-text {
+        font-size: 16px;
     }
 
     .search-input {
-        font-size: 24px; /* Further reduce input font size for phones */
+        font-size: 16px;
     }
 
     .footer-text {
-        font-size: 18px; /* Reduce footer text size for better readability */
-        padding: 0 40px; /* Increase padding on both sides for mobile */
+        font-size: 18px;
+        padding: 0 40px;
     }
 
     .signup-button {
-        font-size: 12px; /* Reduce button font size for phones */
-        padding: 3px 6px; /* Adjust padding for phones */
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .center-map {
+        width: 100%;
+        height: auto;
     }
 }
